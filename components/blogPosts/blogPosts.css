@@ -1,0 +1,184 @@
+.blog-section {
+    padding: 2.5rem;
+    border-radius: 20px;
+    background: rgba(255, 255, 255, 0.08);
+    backdrop-filter: blur(24px);
+    -webkit-backdrop-filter: blur(24px);
+    border: 0.5px solid rgba(255, 255, 255, 0.2);
+    box-shadow: inset 0 1px 0 rgba(255, 255, 255, 0.15);
+}
+
+.blog-list-header {
+    color: white;
+    margin-bottom: 1.25rem;
+    padding-bottom: 1rem;
+    border-bottom: 0.5px solid rgba(255, 255, 255, 0.12);
+}
+
+.blog-cards {
+    display: flex;
+    flex-direction: column;
+    gap: 0.75rem;
+}
+
+.blog-card {
+    padding: 1.25rem;
+    border-radius: 12px;
+    background: rgba(255, 255, 255, 0.06);
+    border: 0.5px solid rgba(255, 255, 255, 0.12);
+    border-left: 2px solid rgba(255, 255, 255, 0.25);
+    cursor: pointer;
+    transition: background 0.2s, border-color 0.2s;
+}
+
+.blog-card:hover {
+    background: rgba(255, 255, 255, 0.1);
+    border-left-color: rgba(255, 255, 255, 0.6);
+}
+
+.blog-card-title {
+    font-size: 16px;
+    font-weight: 600;
+    color: white;
+    margin-bottom: 4px;
+}
+
+.blog-card-date {
+    font-size: 12px;
+    color: rgba(255, 255, 255, 0.45);
+    margin-bottom: 8px;
+    letter-spacing: 0.03em;
+}
+
+.blog-card-excerpt {
+    font-size: 13px;
+    color: rgba(255, 255, 255, 0.7);
+    line-height: 1.5;
+}
+
+.blog-back-btn {
+    background: none;
+    border: 0.5px solid rgba(255, 255, 255, 0.3);
+    color: rgba(255, 255, 255, 0.7);
+    padding: 6px 16px;
+    border-radius: 8px;
+    font-size: 13px;
+    font-family: inherit;
+    cursor: pointer;
+    margin-bottom: 1.5rem;
+    transition: all 0.2s;
+}
+
+.blog-back-btn:hover {
+    background: rgba(255, 255, 255, 0.1);
+    color: white;
+}
+
+.blog-post-view {
+    padding-top: 0.5rem;
+}
+
+.blog-post-view h1 {
+    font-size: 26px;
+    color: white;
+    margin-bottom: 0.4rem;
+    line-height: 1.25;
+}
+
+.blog-post-view h2 {
+    font-size: 18px;
+    color: white;
+    margin-top: 2rem;
+    margin-bottom: 0.5rem;
+    padding-bottom: 0.4rem;
+    border-bottom: 0.5px solid rgba(255, 255, 255, 0.12);
+}
+
+.blog-post-view h3 {
+    font-size: 15px;
+    color: rgba(255, 255, 255, 0.85);
+    margin-top: 1.5rem;
+    margin-bottom: 0.4rem;
+}
+
+.blog-post-view p {
+    color: rgba(255, 255, 255, 0.82);
+    margin-bottom: 1rem;
+    max-width: 65ch;
+    line-height: 1.8;
+    font-size: 15px;
+}
+
+.blog-post-view blockquote {
+    border-left: 2px solid rgba(255, 255, 255, 0.25);
+    margin: 1.25rem 0;
+    padding: 0.25rem 0 0.25rem 1rem;
+    color: rgba(255, 255, 255, 0.5);
+    font-style: italic;
+    font-size: 14px;
+}
+
+.blog-post-view img {
+    width: 100%;
+    max-width: 100%;
+    border-radius: 12px;
+    margin: 1.25rem 0;
+    display: block;
+    border: 0.5px solid rgba(255, 255, 255, 0.1);
+}
+
+.blog-post-view hr {
+    border: none;
+    border-top: 0.5px solid rgba(255, 255, 255, 0.12);
+    margin: 2rem 0;
+}
+
+.blog-post-view strong {
+    color: white;
+    font-weight: 600;
+}
+
+.blog-post-view a {
+    color: rgba(255, 255, 255, 0.75);
+    text-decoration: none;
+    border-bottom: 0.5px solid rgba(255, 255, 255, 0.3);
+    transition: color 0.2s;
+}
+
+.blog-post-view a:hover {
+    color: white;
+}
+
+@media (min-width: 801px) {
+    .split-image,
+    .split-content {
+        transition: width 0.4s cubic-bezier(.4,0,.2,1);
+    }
+
+    .fs-split.post-open .split-image {
+        width: 30%;
+    }
+
+    .fs-split.post-open .split-content {
+        width: 70%;
+    }
+
+    .fs-split.post-open .split-content main {
+        max-width: 100%;
+        padding: 2rem 1.5rem;
+        padding-top: 100px;
+    }
+
+    .fs-split.post-open .blog-section {
+        width: 100%;
+    }
+
+    .fs-split.post-open .blog-post-view p {
+        max-width: 100%;
+        font-size: 17px;
+    }
+
+    .fs-split.post-open .blog-post-view h2 {
+        font-size: 22px;
+    }
+}

@@ -1,0 +1,23 @@
+[
+  {
+    "title": "Chatbot Therapy: A Critical Analysis of AI Mental Health Treatment",
+    "author": "Eoin Fullam",
+    "tag": "Book",
+    "description": "Chatbot A Critical Analysis of AI Mental Health Treatment examines automated mental health therapy in the form of therapy chatbots, taking a critical analysis of this new technology.",
+    "cover": "static/images/recommends/covers/Chatbot_therapy.png"
+  },
+  {
+    "title": "Boy Parts",
+    "author": "Eliza Clark",
+    "tag": "Book",
+    "description": "Exiled from the art world and on sabbatical from her dead-end bar job, Irina obsessively takes explicit photographs of the average-looking men she persuades to model for her, scouted from the streets of Newcastle.",
+    "cover": "static/images/recommends/covers/Boy_parts.png"
+  },
+  {
+    "title": "Human Acts",
+    "author": "Han Kang, Deborah Smith (Translator)",
+    "tag": "Book",
+    "description": "Gwangju, South Korea, 1980. In the wake of a viciously suppressed student uprising, a boy searches for his friend's corpse, a consciousness searches for its abandoned body, and a brutalised country searches for a voice.",
+    "cover": "static/images/recommends/covers/Human_acts.png"
+  }
+]

@@ -1,0 +1,13 @@
+.logo-content {
+    padding: 2.5rem;
+    border-radius: 20px;
+    background: #ffffff;
+    box-shadow: 0 0 40px 20px rgba(255, 255, 255, 0.3),
+    0 0 80px 40px rgba(255, 255, 255, 0.1);
+}
+
+.logo-image {
+    width: 100%;
+    height: auto;
+    display: block;
+}

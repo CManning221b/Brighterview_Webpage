@@ -1,0 +1,28 @@
+.sessionDetails-section{
+    padding: 2.5rem;
+    border-radius: 20px;
+    background: rgba(255, 255, 255, 0.12);
+    backdrop-filter: blur(16px);
+    border: 0.5px solid rgba(255, 255, 255, 0.25);
+}
+
+#sessionDetails-content h1,
+#sessionDetails-content h2,
+#sessionDetails-content h3
+{
+    color: white;
+    margin-bottom: 0.75rem;
+}
+
+#sessionDetails-content p {
+    color: rgba(255, 255, 255, 0.85);
+    margin-bottom: 1rem;
+    max-width: 65ch;
+}
+
+#sessionDetails-content li{
+    color: rgba(255, 255, 255, 0.85);
+    margin-bottom: 1rem;
+    max-width: 65ch;
+}
+

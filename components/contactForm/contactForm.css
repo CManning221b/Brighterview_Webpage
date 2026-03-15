@@ -1,0 +1,129 @@
+.contact-section {
+    padding: 2.5rem;
+    border-radius: 20px;
+    background: rgba(255, 255, 255, 0.12);
+    backdrop-filter: blur(16px);
+    border: 0.5px solid rgba(255, 255, 255, 0.25);
+}
+
+#contact-content h1,
+#contact-content h2,
+#contact-content h3{
+    color: white;
+    margin-bottom: 0.75rem;
+}
+
+#contact-content p {
+    color: rgba(255, 255, 255, 0.85);
+    margin-bottom: 1rem;
+    max-width: 65ch;
+}
+
+.contact-form-wrapper {
+    margin-top: 1.5rem;
+    padding: 2rem;
+    border-radius: 16px;
+    background: rgba(0, 0, 0, 0.2);
+    border: 0.5px solid rgba(255, 255, 255, 0.15);
+}
+
+.contact-form {
+    display: flex;
+    flex-direction: column;
+    gap: 0.75rem;
+}
+
+.form-group {
+    display: flex;
+    flex-direction: column;
+    gap: 4px;
+}
+
+.form-group > label {
+    font-size: 13px;
+    color: rgba(255, 255, 255, 0.7);
+    letter-spacing: 0.04em;
+}
+
+.form-group input,
+.form-group textarea {
+    background: rgba(255, 255, 255, 0.08);
+    border: 0.5px solid rgba(255, 255, 255, 0.2);
+    border-radius: 10px;
+    padding: 12px 16px;
+    color: #fff;
+    font-size: 14px;
+    font-family: inherit;
+    transition: border 0.2s, background 0.2s;
+    resize: none;
+}
+
+.form-group input::placeholder,
+.form-group textarea::placeholder {
+    color: rgba(255, 255, 255, 0.3);
+}
+
+.form-group input:focus,
+.form-group textarea:focus {
+    outline: none;
+    border-color: rgba(255, 255, 255, 0.5);
+    background: rgba(255, 255, 255, 0.12);
+}
+
+.days-group {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 8px;
+}
+
+.day-pill input {
+    display: none;
+}
+
+.day-pill span {
+    display: inline-block;
+    padding: 6px 14px;
+    border-radius: 20px;
+    font-size: 13px;
+    color: rgba(255, 255, 255, 0.7);
+    background: rgba(255, 255, 255, 0.08);
+    border: 0.5px solid rgba(255, 255, 255, 0.2);
+    cursor: pointer;
+    transition: all 0.2s;
+    user-select: none;
+}
+
+.day-pill input:checked + span {
+    background: rgba(255, 255, 255, 0.25);
+    border-color: rgba(255, 255, 255, 0.6);
+    color: #fff;
+}
+
+.day-pill span:hover {
+    background: rgba(255, 255, 255, 0.15);
+}
+
+.form-btn {
+    align-self: flex-start;
+    padding: 10px 24px;
+    border-radius: 10px;
+    border: 0.5px solid rgba(255, 255, 255, 0.4);
+    background: rgba(255, 255, 255, 0.18);
+    color: #fff;
+    font-size: 14px;
+    font-family: inherit;
+    cursor: pointer;
+    transition: background 0.2s;
+}
+
+.form-btn:hover { background: rgba(255, 255, 255, 0.28); }
+.form-btn:disabled { opacity: 0.5; cursor: default; }
+
+.form-status {
+    font-size: 13px;
+    min-height: 20px;
+    color: rgba(255, 255, 255, 0.7);
+}
+
+.form-status.success { color: #6fcf97; }
+.form-status.error   { color: #eb5757; }

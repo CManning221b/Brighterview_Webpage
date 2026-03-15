@@ -1,0 +1,78 @@
+:root {
+    --font-main: 'Nunito', sans-serif;
+    --font-ui: 'Nunito', sans-serif;
+    --color-bg: #1A5276;
+    --bg-gradient: radial-gradient(circle at 0% 0%, #2471a3 0%, #1a5276 50%, #13153e 100%);
+    --color-text: #222222;
+    --color-accent: #2a6496;
+    --color-muted: #666666;
+    --max-width: 860px;
+}
+
+
+
+*, *::before, *::after {
+    box-sizing: border-box;
+    margin: 0;
+    padding: 0;
+}
+
+body {
+    font-family: var(--font-main);
+    background: var(--bg-gradient);
+    background-attachment: fixed; /* Keeps the "swirl" stationary as you scroll */
+    color: var(--color-text);
+    line-height: 1.7;
+}
+
+main {
+    max-width: var(--max-width);
+    margin: 0 auto;
+    padding: 2rem 1.5rem;
+    padding-top: 100px; /* clears the fixed navbar */
+}
+
+
+section {
+    scroll-margin-top: 80px;
+    margin: 2.5rem 0;
+}
+
+.fs-split {
+    width: 100vw;
+    height: 100vh;
+    display: flex;
+}
+
+.split-image {
+    width: 50%;
+    height: 100vh;
+    background-image: url('static/images/my_profile_pic.png');
+    background-size: cover;
+    background-position: top center;
+    position: sticky;
+    top: 0;
+    flex-shrink: 0;
+}
+
+.split-content {
+    width: 50%;
+    min-height: 100vh;
+    overflow-y: auto;
+    position: relative; /* so fixed navbar positions relative to this */
+}
+
+@media (max-width: 800px) {
+    .fs-split {
+        flex-direction: column;
+    }
+
+    .split-image {
+        display: none; /* hide image entirely on mobile */
+    }
+
+    .split-content {
+        width: 100%;
+        min-height: 100vh;
+    }
+}

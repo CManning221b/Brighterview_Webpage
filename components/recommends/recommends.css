@@ -1,0 +1,192 @@
+.recommends-section {
+    padding: 2.5rem;
+    border-radius: 20px;
+    background: rgba(255, 255, 255, 0.12);
+    backdrop-filter: blur(16px);
+    border: 0.5px solid rgba(255, 255, 255, 0.25);
+}
+
+#recommends-content h1,
+#recommends-content h2 {
+    color: white;
+    margin-bottom: 0.75rem;
+}
+
+#recommends-content p {
+    color: rgba(255, 255, 255, 0.85);
+    margin-bottom: 0.1rem;
+    max-width: 65ch;
+}
+
+.rc-container {
+    position: relative;
+    width: 100%;
+    height: 550px;
+    border-radius: 20px;
+    overflow: hidden;
+}
+
+.rc-slide {
+    position: relative;
+    width: 100%;
+    height: 100%;
+}
+
+.rc-item {
+    width: 160px;
+    height: 240px;
+    position: absolute;
+    top: 50%;
+    transform: translateY(-50%);
+    border-radius: 12px;
+    background-size: cover;
+    background-position: center;
+    transition: all 0.5s cubic-bezier(.4,0,.2,1);
+    border: 0.5px solid rgba(255,255,255,0.15);
+}
+
+.rc-slide .rc-item:nth-child(1) {
+    top: 0;
+    left: 0;
+    transform: none;
+    width: 100%;
+    height: 100%;
+    border-radius: 20px;
+    border: none;
+    cursor: default;
+}
+
+.rc-slide .rc-item:nth-child(2)  { left: 50%; }
+.rc-slide .rc-item:nth-child(3)  { left: calc(50% + 180px); }
+.rc-slide .rc-item:nth-child(4)  { left: calc(50% + 360px); }
+.rc-slide .rc-item:nth-child(5)  { left: calc(50% + 540px); }
+.rc-slide .rc-item:nth-child(n+6){ left: calc(50% + 720px); opacity: 0; }
+
+.rc-overlay { display: none; }
+
+.rc-content {
+    position: absolute;
+    top: 50%;
+    left: 40px;
+    width: 240px;
+    transform: translateY(-50%);
+    display: none;
+    padding: 20px 24px;
+    border-radius: 16px;
+    background: rgba(0, 0, 0, 0.45);
+    backdrop-filter: blur(12px);
+    -webkit-backdrop-filter: blur(12px);
+    border: 0.5px solid rgba(255, 255, 255, 0.2);
+    color: #fff;
+}
+
+.rc-slide .rc-item:nth-child(1) .rc-content { display: block; }
+
+.rc-tag {
+    display: inline-block;
+    font-size: 11px;
+    letter-spacing: 0.08em;
+    text-transform: uppercase;
+    padding: 3px 10px;
+    border-radius: 20px;
+    background: rgba(255,255,255,0.18);
+    border: 0.5px solid rgba(255,255,255,0.35);
+    margin-bottom: 10px;
+    opacity: 0;
+    animation: rcfade 0.7s ease forwards 0.1s;
+}
+
+.rc-title {
+    font-size: 22px;
+    font-weight: 500;
+    line-height: 1.2;
+    margin-bottom: 6px;
+    opacity: 0;
+    animation: rcfade 0.7s ease forwards 0.25s;
+}
+
+.rc-author {
+    font-size: 13px;
+    color: rgba(255,255,255,0.7);
+    margin-bottom: 16px;
+    opacity: 0;
+    animation: rcfade 0.7s ease forwards 0.35s;
+}
+
+.rc-desc {
+    font-size: 13px;
+    color: rgba(255,255,255,0.7);
+    margin-bottom: 16px;
+    opacity: 0;
+    animation: rcfade 0.7s ease forwards 0.35s;
+}
+
+.rc-btn {
+    display: inline-block;
+    padding: 8px 18px;
+    border-radius: 8px;
+    font-size: 13px;
+    background: rgba(255,255,255,0.18);
+    border: 0.5px solid rgba(255,255,255,0.5);
+    color: #fff;
+    cursor: pointer;
+    text-decoration: none;
+    transition: background 0.3s;
+    opacity: 0;
+    animation: rcfade 0.7s ease forwards 0.45s;
+}
+
+.rc-btn:hover { background: rgba(255,255,255,0.32); }
+
+@keyframes rcfade {
+    from { opacity: 0; transform: translateY(18px); }
+    to   { opacity: 1; transform: translateY(0); }
+}
+
+.rc-btns {
+    display: flex;
+    gap: 12px;
+    position: absolute;
+    bottom: 20px;
+    left: 50%;
+    transform: translateX(-50%);
+}
+
+.rc-btns button {
+    width: 38px;
+    height: 34px;
+    border-radius: 8px;
+    border: 0.5px solid rgba(255,255,255,0.35);
+    background: rgba(255,255,255,0.15);
+    color: #fff;
+    cursor: pointer;
+    font-size: 14px;
+    transition: all 0.2s;
+}
+
+.rc-btns button:hover {
+    background: rgba(255,255,255,0.28);
+    transform: scale(1.08);
+}
+
+@media (max-width: 600px) {
+    .rc-container {
+        height: 480px;
+    }
+
+    .rc-slide .rc-item:nth-child(n+2) {
+        display: none;
+    }
+
+    .rc-content {
+        top: auto;
+        bottom: 60px;
+        left: 20px;
+        width: calc(100% - 40px);
+        transform: none;
+    }
+
+    .rc-title {
+        font-size: 20px;
+    }
+}

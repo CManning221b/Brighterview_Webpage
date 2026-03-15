@@ -1,0 +1,64 @@
+.contactDetails-section {
+    padding: 2.5rem;
+    border-radius: 20px;
+    background: rgba(255, 255, 255, 0.12);
+    backdrop-filter: blur(16px);
+    border: 0.5px solid rgba(255, 255, 255, 0.25);
+}
+
+#contactDetails-content h1,
+#contactDetails-content h2,
+#contactDetails-content h3 {
+    color: white;
+    margin-bottom: 1.25rem;
+}
+
+#contactDetails-content ul {
+    list-style: none;
+    padding: 0;
+    margin: 0;
+    display: flex;
+    flex-direction: column;
+    gap: 0.75rem;
+}
+
+#contactDetails-content li {
+    display: flex;
+    align-items: center;
+    gap: 1rem;
+    padding: 0.875rem 1.25rem;
+    border-radius: 12px;
+    background: rgba(0, 0, 0, 0.2);
+    border: 0.5px solid rgba(255, 255, 255, 0.15);
+    color: rgba(255, 255, 255, 0.85);
+    font-size: 14px;
+    line-height: 1.4;
+}
+
+#contactDetails-content li::before {
+    content: '✦';
+    font-size: 16px;
+    opacity: 0.6;
+    flex-shrink: 0;
+}
+
+
+#contactDetails-content li strong {
+    color: white;
+    font-weight: 600;
+    margin-right: 0.25rem;
+    flex-shrink: 0;
+}
+
+#contactDetails-content li a {
+    color: rgba(255, 255, 255, 0.7);
+    text-decoration: none;
+    border-bottom: 0.5px solid rgba(255, 255, 255, 0.3);
+    transition: color 0.2s, border-color 0.2s;
+    word-break: break-all;
+}
+
+#contactDetails-content li a:hover {
+    color: #fff;
+    border-color: rgba(255, 255, 255, 0.7);
+}

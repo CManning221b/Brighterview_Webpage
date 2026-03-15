@@ -1,0 +1,19 @@
+.personal-section {
+    padding: 2.5rem;
+    border-radius: 20px;
+    background: rgba(255, 255, 255, 0.12);
+    backdrop-filter: blur(16px);
+    border: 0.5px solid rgba(255, 255, 255, 0.25);
+}
+
+#personal-content h1,
+#personal-content h2 {
+    color: white;
+    margin-bottom: 0.75rem;
+}
+
+#personal-content p {
+    color: rgba(255, 255, 255, 0.85);
+    margin-bottom: 1rem;
+    max-width: 65ch;
+}
